@@ -15,13 +15,14 @@ export default function Home() {
     <main className={styles.main}>
       <motion.div className={styles.mask}
         animate={{
-          WebkitMaskPosition: `${x - size/2}px ${y - size/2}px`,
-          WebkitMaskSize: `${size}px`,
+          WebkitMaskPosition: `${x - size/2}px ${y - size/2}px`, // usamos o calculo para centralizar a mascara no cursor
+          WebkitMaskSize: `${size}px`, // propriedade para saber tamanho total ou parcial da mascara
           transition: {type: "tween", ease: "backOut"}
 
         }}
       >
         <p onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>
+           {/* onMouseEnter: chama uma função quando o cursor se mover no elemento - onMouseLeave: chama a função após o cursor sair do elemento  */}
           A visual designer - with skills that haven&apos;t been replaced by A.I (yet)
           - making good shit only if the paycheck is equally good.
         </p>
